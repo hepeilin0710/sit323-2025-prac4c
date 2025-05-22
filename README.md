@@ -24,6 +24,7 @@ Proper input validation and error handling are included to ensure reliability an
 
 ---
 
+
 ## 📡 API Endpoints
 
 All endpoints use the `POST` method and accept JSON bodies.
@@ -32,36 +33,56 @@ All endpoints use the `POST` method and accept JSON bodies.
 
 ### ➕ `/add`
 
+**Request:**
 ```json
-Request: { "num1": 5, "num2": 3 }
-Response: { "result": 8 }
+{ "num1": 5, "num2": 3 }
+```
+
+**Response:**
+```json
+{ "result": 8 }
 ```
 
 ---
 
 ### ➖ `/subtract`
 
+**Request:**
 ```json
-Request: { "num1": 10, "num2": 4 }
-Response: { "result": 6 }
+{ "num1": 10, "num2": 4 }
+```
+
+**Response:**
+```json
+{ "result": 6 }
 ```
 
 ---
 
 ### ✖️ `/multiply`
 
+**Request:**
 ```json
-Request: { "num1": 6, "num2": 7 }
-Response: { "result": 42 }
+{ "num1": 6, "num2": 7 }
+```
+
+**Response:**
+```json
+{ "result": 42 }
 ```
 
 ---
 
 ### ➗ `/divide`
 
+**Request:**
 ```json
-Request: { "num1": 10, "num2": 2 }
-Response: { "result": 5 }
+{ "num1": 10, "num2": 2 }
+```
+
+**Response:**
+```json
+{ "result": 5 }
 ```
 
 ⚠️ Error if `num2 == 0`
@@ -70,18 +91,28 @@ Response: { "result": 5 }
 
 ### 🧮 `/power`
 
+**Request:**
 ```json
-Request: { "num1": 2, "num2": 3 }
-Response: { "result": 8 }
+{ "num1": 2, "num2": 3 }
+```
+
+**Response:**
+```json
+{ "result": 8 }
 ```
 
 ---
 
 ### ➰ `/modulo`
 
+**Request:**
 ```json
-Request: { "num1": 10, "num2": 3 }
-Response: { "result": 1 }
+{ "num1": 10, "num2": 3 }
+```
+
+**Response:**
+```json
+{ "result": 1 }
 ```
 
 ⚠️ Error if `num2 == 0`
@@ -90,9 +121,14 @@ Response: { "result": 1 }
 
 ### √ `/sqrt`
 
+**Request:**
 ```json
-Request: { "num": 25 }
-Response: { "result": 5 }
+{ "num": 25 }
+```
+
+**Response:**
+```json
+{ "result": 5 }
 ```
 
 ⚠️ Error if `num < 0`
@@ -103,27 +139,42 @@ Response: { "result": 5 }
 
 ### Invalid Input Types
 
+**Request:**
 ```json
-Request: { "num1": "abc", "num2": 3 }
-Response: { "error": "The input parameters num1 and num2 must be numeric types" }
+{ "num1": "abc", "num2": 3 }
+```
+
+**Response:**
+```json
+{ "error": "The input parameters num1 and num2 must be numeric types" }
 ```
 
 ---
 
 ### Division or Modulo by Zero
 
+**Request:**
 ```json
-Request: { "num1": 10, "num2": 0 }
-Response: { "error": "The divisor cannot be 0" }
+{ "num1": 10, "num2": 0 }
+```
+
+**Response:**
+```json
+{ "error": "The divisor cannot be 0" }
 ```
 
 ---
 
 ### Negative Square Root
 
+**Request:**
 ```json
-Request: { "num": -9 }
-Response: { "error": "The input to the square root operation cannot be negative." }
+{ "num": -9 }
+```
+
+**Response:**
+```json
+{ "error": "The input to the square root operation cannot be negative." }
 ```
 
 ---
